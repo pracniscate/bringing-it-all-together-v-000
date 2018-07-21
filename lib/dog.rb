@@ -28,7 +28,7 @@ class Dog
     # return a dog array from the database
     id = row[0]
     name = row[1]
-    breed = [2]
+    breed = row[2]
     self.new(id: id, name: name, breed: breed)
   end
 
