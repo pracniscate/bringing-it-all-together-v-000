@@ -55,7 +55,7 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
     # query the database
-    song = DB[:conn].execute("SELECT dogs.* FROM dogs WHERE name = ? AND breed = ?", name, breed)
+    dog = DB[:conn].execute("SELECT dogs.* FROM dogs WHERE name = ? AND breed = ?", name, breed)
     if !dog.empty
       # reinstantiate an existing Dog object
       dog_data = dog[0]
