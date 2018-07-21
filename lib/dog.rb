@@ -39,4 +39,12 @@ class Dog
     self
   end
 
+  def self.create(name:, breed:)
+    # create a new dog object using metaprogramming
+    dog = self.new(name: name, breed: breed)
+    # save that dog to the database
+    dog.save
+    dog
+  end
+
 end
